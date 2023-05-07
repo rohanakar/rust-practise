@@ -1,0 +1,14 @@
+version: "2"
+services:
+  rust:
+    container_name: rust
+    image: rust:1.67
+    networks:
+      - rust
+    tty: true
+    volumes:
+      - ./src:/Desktop
+    working_dir: /Desktop
+
+networks:
+  rust:
